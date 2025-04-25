@@ -1,0 +1,139 @@
+/* src/components/Calendar.css */
+.calendar-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.timezone-selector {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.timezone-selector label {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.timezone-dropdown {
+  min-width: 250px;
+}
+
+.date-picker-container {
+  margin-bottom: 15px;
+}
+
+.selected-dates {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.selected-dates p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Custom tooltip styling */
+.tooltip {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 1000;
+  max-width: 250px;
+  pointer-events: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for dates with messages */
+.has-message {
+  position: relative;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #ff6b6b;
+  font-weight: bold;
+  cursor: help;
+}
+
+/* Styling for disabled dates */
+.react-datepicker__day--disabled.has-message {
+  background-color: #ffeeee;
+  text-decoration-color: #ff0000;
+  opacity: 0.8;
+}
+
+/* Styling for enabled but special dates */
+.has-message:not(.react-datepicker__day--disabled) {
+  background-color: #e6f7ff;
+  border-radius: 50%;
+}
+
+/* Make special dates more noticeable */
+.has-message::after {
+  content: "!";
+  position: absolute;
+  top: -5px;
+  right: -2px;
+  font-size: 10px;
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+/* Styling for the DatePicker component */
+.react-datepicker {
+  font-family: 'Arial', sans-serif;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.react-datepicker__header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.react-datepicker__day--selected {
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range {
+  background-color: rgba(0, 123, 255, 0.3);
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: rgba(0, 123, 255, 0.5);
+}
+
+/* Special message indicator for the calendar */
+.calendar-legend {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border-radius: 2px;
+}
+
+.legend-disabled {
+  background-color: #e6f7ff;
+}

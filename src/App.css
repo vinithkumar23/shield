@@ -1,0 +1,81 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #ebf0f5;
+  color:cornflowerblue;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* For larger screens, display calendar and table side by side */
+@media (min-width: 1200px) {
+  .app-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .calendar-section {
+    flex: 0 0 350px;
+    position: sticky;
+    top: 20px;
+  }
+  
+  .table-section {
+    flex: 1;
+  }
+}
+
+/* For medium screens */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .calendar-section {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Remove default styles from buttons */
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
